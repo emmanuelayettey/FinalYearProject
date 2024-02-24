@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side Panel Example</title>
+    <style>
+      body {
+        display: flex;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      #side-panel {
+        width: 200px;
+        background-color: #f5f5f5;
+        padding: 20px;
+      }
+
+      #content {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        background-color: #4caf50;
+        color: white;
+        padding: 15px;
+        text-align: left;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="side-panel">
+      <a href="{{ url_for('settings') }}" class="btn">Settings</a>
+      <a href="{{ url_for('legitimate_claims') }}" class="btn"
+        >Legitimate Claims</a
+      >
+      <a href="{{ url_for('fraudulent_claims') }}" class="btn"
+        >Fraudulent Claims</a
+      >
+      <a href="{{ url_for('graphical_analysis') }}" class="btn"
+        >Graphical Analysis</a
+      >
+    </div>
+    <div id="content">
+      <!-- Content will be rendered here -->
+    </div>
+  </body>
+</html>
